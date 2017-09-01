@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Anki packages
+*.apkg
+
+# extracted images
+*.jpg
+*.png
