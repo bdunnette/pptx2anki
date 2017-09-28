@@ -2,11 +2,14 @@
 
 import sys, os
 import genanki
+from random import randrange
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
+deck_name = os.path.splitext(os.path.basename(sys.argv[1]))[0]
+
 my_model = genanki.Model(
-  1234567890,
+  randrange(9999999999),
   'Simple Model',
   fields=[
     {'name': 'Question'},
@@ -20,10 +23,9 @@ my_model = genanki.Model(
     },
   ])
 
-deck_name = os.path.splitext(os.path.basename(sys.argv[1]))[0]
-
 my_deck = genanki.Deck(
-  1234567890,
+  # Generate a large random deck ID to prevent decks 'overlapping' on import
+  randrange(9999999999),
   deck_name)
 
 my_package = genanki.Package(my_deck)
