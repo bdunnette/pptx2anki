@@ -26,7 +26,7 @@ Finally, run the script:
 
 As of [January 2018](https://github.com/bdunnette/pptx2anki/tree/b969dcdfa73a23b07ee67601622324863cbeb08d), this tool relies on PPTX files being formatted as follows:
 
-* The slide for the "front" of the card should contain 1 image (NOTE: if you modify or crop the image in PowerPoint, these modifications WILL NOT appear on the card, so it's recommended to edit images outside of PowerPoint and then add them to slides!)
+* The slide for the "front" of the card should contain 1 image (NOTE: if you modify or crop the image in PowerPoint, these modifications _will not_ appear on the card, so it's recommended to edit images outside of PowerPoint and then add them to slides!)
 * The "front" slide should also contain presenter notes - these are used to group slides/cards, and will be added to the card's "back"
 * If you want a "back" image for the card, place that slide immediately after the "front" slide, and _with the same notes as the front_ - otherwise, the notes from the "front" slide will simply be placed on the card's "back"
 
@@ -34,5 +34,5 @@ As of [January 2018](https://github.com/bdunnette/pptx2anki/tree/b969dcdfa73a23b
 
 |Card Type|PowerPoint (front)|PowerPoint (back)|Anki|
 |---|---|---|---|
-|Front Image Only|![PowerPoint (front)](images/card-pptx-front-noback.jpeg)|N/A|![PowerPoint (front)](images/card-anki-noback.jpeg)|
-|Front and Back Images|![PowerPoint (front)](images/card-pptx-front.jpeg)|![PowerPoint (front)](images/card-pptx-back.jpeg)(Note that notes section has the same text as the "front" slide)|![PowerPoint (front)](images/card-anki-2images.jpeg)|
+|Front Image Only|![PowerPoint (front)](images/card-pptx-front-noback.jpeg)|None (no slide with matching notes)|![PowerPoint (front)](images/card-anki-noback.jpeg)|
+|Front and Back Images|![PowerPoint (front)](images/card-pptx-front.jpeg)|![PowerPoint (front)](images/card-pptx-back.jpeg)(Note that notes section has the same text as the "front" slide - image can be same as "front" or different)|![PowerPoint (front)](images/card-anki-2images.jpeg)|
