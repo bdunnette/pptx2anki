@@ -106,3 +106,4 @@ ENV/
 # extracted images
 *.jpg
 *.png
+!images/*
