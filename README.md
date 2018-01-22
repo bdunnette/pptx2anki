@@ -34,5 +34,5 @@ As of [January 2018](https://github.com/bdunnette/pptx2anki/tree/b969dcdfa73a23b
 
 |Card Type|PowerPoint (front)|PowerPoint (back)|Anki|
 |---|---|---|---|
-|Front and Back Images|![PowerPoint (front)](images/card-pptx-front.PNG)|![PowerPoint (front)](images/card-pptx-back.PNG)|![PowerPoint (front)](images/card-anki-2images.PNG)|
-|Front Image Only|![PowerPoint (front)](images/card-pptx-front-noback.PNG)||![PowerPoint (front)](images/card-anki-noback.PNG)|
+|Front Image Only|![PowerPoint (front)](images/card-pptx-front-noback.PNG)|N/A|![PowerPoint (front)](images/card-anki-noback.PNG)|
+|Front and Back Images|![PowerPoint (front)](images/card-pptx-front.PNG)|![PowerPoint (front)](images/card-pptx-back.PNG)(Note that notes section has the same text as the "front" slide)|![PowerPoint (front)](images/card-anki-2images.PNG)|
