@@ -19,7 +19,7 @@ pip install -r requirements.txt
 Finally, run the script:
 
 ```
-./pptx2anki.py my_presentation.pptx
+python pptx2anki.py my_presentation.pptx
 ```
 
 ## PowerPoint Formatting
