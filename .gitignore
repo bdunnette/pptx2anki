@@ -106,4 +106,6 @@ ENV/
 # extracted images
 *.jpg
 *.png
+*.pptx
 !images/*
+.idea/
