@@ -55,26 +55,30 @@ for slide_index, slide in enumerate(prs.slides):
             slide_info[slide_index]['image'] = image_file
     print(slide_info[slide_index])
 
+
+last_slide_index = len(slide_info) - 1
 # Loop through slides in slide_info
 for idx, slide in enumerate(slide_info):
-    print("Processing slide %s" % idx)
+    print("Processing slide %s/%s" % (idx, last_slide_index))
     if 'image' in slide and not 'processed' in slide:
         # print(slide)
         slide_text = slide['text'].strip()
         print("Slide text: %s" % slide_text)
-        next_slide = slide_info[idx+1]
-        next_slide_text = next_slide['text'].strip()
-        print("Next slide text: %s" % next_slide_text)
-        back_slide_exists = ((slide_text == next_slide_text) or (
-            slide_text == next_slide_text.rstrip(".")) or (slide_text.rstrip(".") == next_slide_text))
-        print("Back slide found: %s" % back_slide_exists)
-        print("Slide notes: %s" % slide_text)
-        # If next slide has same note text as this one, add that slide's image as the "back" of our card
-        if (back_slide_exists) and ('image' in next_slide):
-            back_text = "<img src='%s'><p>%s</p>" % (
-                next_slide['image'], slide_text)
-            my_package.media_files.append(next_slide['image'])
-            slide_info[idx+1]['processed'] = True
+        # If this isn't the last slide, check for a next/annotated version
+        if idx < last_slide_index:
+            next_slide = slide_info[idx+1]
+            next_slide_text = next_slide['text'].strip()
+            print("Next slide text: %s" % next_slide_text)
+            back_slide_exists = ((slide_text == next_slide_text) or (
+                slide_text == next_slide_text.rstrip(".")) or (slide_text.rstrip(".") == next_slide_text))
+            print("Back slide found: %s" % back_slide_exists)
+            print("Slide notes: %s" % slide_text)
+            # If next slide has same note text as this one, add that slide's image as the "back" of our card
+            if (back_slide_exists) and ('image' in next_slide):
+                back_text = "<img src='%s'><p>%s</p>" % (
+                    next_slide['image'], slide_text)
+                my_package.media_files.append(next_slide['image'])
+                slide_info[idx+1]['processed'] = True
         # Otherwise, just put the note text on the card back
         else:
             back_text = slide_text
