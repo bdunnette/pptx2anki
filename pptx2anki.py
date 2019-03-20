@@ -89,3 +89,7 @@ for idx, slide in enumerate(slide_info):
 
 # Export deck to .apkg file
 my_package.write_to_file('%s.apkg' % deck_name)
+
+# Clean up extracted images
+for f in my_package.media_files:
+    os.remove(f)
