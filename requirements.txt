@@ -3,7 +3,7 @@ frozendict==1.2
 genanki==0.6.3
 lxml==3.8.0
 olefile==0.44
-Pillow==4.2.1
+Pillow==9.0.1
 pystache==0.5.4
 python-pptx==0.6.17
 PyYAML==3.13
