@@ -1,5 +1,7 @@
 # pptx2anki
 
+**Unmaintained as of 2019 - your mileage may vary!**
+
 Convert a PPTX file (with notes and/or annotated images) to an [Anki](https://apps.ankiweb.net/)-compatible flashcard deck.
 
 ## Installation
